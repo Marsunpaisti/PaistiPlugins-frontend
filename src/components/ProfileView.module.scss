@@ -1,0 +1,36 @@
+@import "./../shared.scss";
+
+.container {
+	@extend .genericContainer;
+
+	button:first-of-type{
+		margin-top: 20px;	
+	}
+
+	.alert{
+		min-width: 100%;
+		margin-top: 20px;
+	}
+
+	button {
+		margin-top: 4px;
+	}
+}
+
+.spinnerContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 30px
+}
+.title {
+	@extend .genericTitle;
+	margin-bottom: 35px;
+}
+
+.entry {
+	margin-bottom: 6px;
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+}

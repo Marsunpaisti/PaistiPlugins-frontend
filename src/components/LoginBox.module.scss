@@ -1,0 +1,58 @@
+@import "./../shared.scss";
+
+.container {
+	@extend .genericContainer;
+}
+
+.container.spinner{
+	&.login {
+		min-height: 358px;
+	}
+	&.signup {
+		min-height: 400px;
+	}
+}
+
+.ortext {
+	margin-top: 20px;
+	margin-bottom: 20px;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.loginform {
+	min-width: 100%;
+	display: flex;
+	flex-direction: column;
+	input {
+		margin-top: 6px;
+	}
+	button {
+		margin-top: 20px;
+		font-size: 15px;
+	}
+	.alert {
+		margin-top: 20px;
+	}
+}
+
+.oauth {
+	min-width: 100%;
+	display: flex;
+	flex-direction: column;
+	button {
+		margin-bottom: 6px;
+	}
+}
+
+.loginTitle {
+	@extend .genericTitle;
+}
+
+.register{
+	margin-top: 30px;
+
+	a {
+		font-size: 14px;
+	}
+}

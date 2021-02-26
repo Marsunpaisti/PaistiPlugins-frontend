@@ -1,0 +1,53 @@
+@import "./../shared.scss";
+
+.navbar {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	min-height: 50px;
+	max-height: 50px;
+	min-width: 100%;
+	background-color: $COLOR_DARK2;
+	box-shadow: -1px -27x 57px -4px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: -1px -27px 57px -4px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: -1px -27px 57px -4px rgba(0, 0, 0, 0.75);
+}
+
+.logotitlecontainer {
+	position: absolute;
+	left: 0px;
+	padding-left: 60px;
+	font-family: "Ubuntu Mono";
+	text-decoration: none;
+	background-color: $COLOR_DARK2;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+}
+
+.logo {
+	height: 50px;
+	width: 50px;
+	margin-right: 25px;
+}
+
+.title {
+	font-size: 25px;
+}
+
+.navButton {
+	text-decoration: none;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	min-width: 120px;
+	min-height: 50px;
+	font-weight: bold;
+
+	&:hover {
+		background-color: $COLOR_DARK1;
+	}
+}
