@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import css from './DiscordLoginBox.module.scss'
-import { ReactComponent as DiscordLogo } from './../assets/discord-icon.svg'
+import { ReactComponent as DiscordLogo } from './../assets/discord-icon-text.svg'
 import { MainContext } from '../contexts/MainContext'
 import { LoadingSpinner } from './LoadingSpinner'
 import classNames from 'classnames/bind'
@@ -32,7 +32,7 @@ export const DiscordLoginBox = () => {
 
 	if (isLoading){
 		return (
-		<div className={classes(css.container, css.spinner, css.login)}>
+		<div className={classes(css.container, css.spinner, css.login)} onClick={() => discordLogin()}>
 			<span className={css.spinnerTitle}>Waiting for Discord login...</span>
 			< LoadingSpinner size="normal" />
 		</div>
@@ -41,7 +41,7 @@ export const DiscordLoginBox = () => {
 
 	return (
 		<div className={css.container} onClick={() => discordLogin()}>
-			<span className={css.loginTitle}>Sign in with Discord</span>
+			<span className={css.loginTitle}>Sign in with</span>
 			<DiscordLogo />
 		</div>
 	)

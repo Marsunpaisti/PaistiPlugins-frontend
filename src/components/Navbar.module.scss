@@ -34,10 +34,13 @@
 }
 
 .title {
-	font-size: 25px;
+	font-size: 32px;
 }
 
 .navButton {
+	font-family: "Carrois Gothic SC";
+	text-transform: uppercase;
+	line-height: 1cm;
 	text-decoration: none;
 	display: flex;
 	flex-direction: row;
@@ -48,6 +51,6 @@
 	font-weight: bold;
 
 	&:hover {
-		background-color: $COLOR_DARK1;
+		background-color: $COLOR_DARK2_HOVER;
 	}
 }

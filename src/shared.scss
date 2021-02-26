@@ -1,14 +1,16 @@
 // Shared colors
-$COLOR_DARK1: rgb(30, 30, 30);
-$COLOR_DARK2: rgb(40, 40, 40);
+$COLOR_DARK1: rgb(20, 20, 20);
+$COLOR_DARK2: rgb(33, 33, 33);
 $COLOR_DARK3: rgb(60, 60, 60);
 $COLOR_DARK4: rgb(70, 70, 70);
 $COLOR_DARK5: rgb(80, 80, 80);
-$COLOR_DARK2_BORDER: rgb(37, 37, 37);
+$COLOR_DARK2_BORDER: adjust-color($COLOR_DARK2, -3, -3, -3);
+$COLOR_DARK2_HOVER: adjust-color($COLOR_DARK2, 12, 12, 12);
+$COLOR_DARK2_HOVER_BORDER: adjust-color($COLOR_DARK2_HOVER, -3, -3, -3);
 $COLOR_INPUT_BORDER: rgb(45, 45, 45);
 $COLOR_INPUT_BORDER_FOCUS: rgb(60, 60, 60);
-$COLOR_TEXT: rgb(230, 230, 230);
-
+$COLOR_TEXT: rgb(245, 245, 245);
+$COLOR_NAVBAR: $COLOR_DARK2;
 // Alert colors
 $COLOR_INFO_TEXT: rgb(8, 235, 235);
 $COLOR_ERROR_TEXT: rgb(252, 54, 54);
@@ -36,11 +38,41 @@ $COLOR_ERROR_BORDER: rgb(70, 70, 70);
 	padding: 35px;
 	padding-left: 35px;
 	padding-right: 35px;
-
 	border: 3px solid $COLOR_DARK2_BORDER;
+
+	animation: fadeIn ease 200ms;
+	-webkit-animation: fadeIn ease 200ms;
+	-moz-animation: fadeIn ease 200ms;
+	-o-animation: fadeIn ease 200ms;
+	-ms-animation: fadeIn ease 200ms;
 }
 
 .genericTitle {
 	font-size: 30px;
 	margin-bottom: 15px;
+}
+
+@keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-o-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
+}
+
+@-ms-keyframes fadeIn {
+0% {opacity:0;}
+100% {opacity:1;}
 }

@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
 		<nav className={css.navbar}>
 			<Link to={'/'} className={css.logotitlecontainer}>
 				<KaakkiLogo className={css.logo} />
-				<span className={css.title}>Paisti Plugins</span>
+				<span className={css.title}>PAISTI PLUGINS</span>
 			</Link>
 			<Link to={'/'} className={css.navButton}>
 				Home

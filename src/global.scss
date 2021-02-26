@@ -1,15 +1,40 @@
 @import "./shared.scss";
 
+@font-face {
+	font-family: "Uni Sans Heavy";
+	src: local('Uni Sans Heavy'), url("./assets/fonts//uni-sans.heavy-caps.otf") format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
+
 html {
 	font-family: "Ubuntu", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
+		
+	background: url("./assets/bg.jpg") no-repeat center center fixed; 
+	background-position: 40% 50px;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	//background-image: url("./assets/bg.jpg");
+	//background-size: 110vw 110vh;
+	//background-position: 45% 50px;
 }
 
 body {
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: rgb(30, 30, 30);
+	min-height: 100vh;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
+	background: rgb(0,0,0);
+	background: radial-gradient(circle, rgba(0,0,0,0.65) 0%, rgba(0,0,0,1) 90%); 
+	min-width: 100vw;
 	min-height: 100vh;
 }
 
