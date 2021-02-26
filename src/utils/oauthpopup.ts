@@ -33,8 +33,8 @@ export const signInWithDiscord = async () => {
         const parentH = window.outerHeight;
         const w = 600;
         const h = 800
-        const cornerLeft = Math.round(parentW/2 - w/2);
-        const cornerTop = Math.round(parentH/2 - h/2);
+        const cornerLeft = window.screenLeft + Math.round(parentW/2 - w/2);
+        const cornerTop = window.screenTop + Math.round(parentH/2 - h/2);
         const windowFeatures = `toolbar=no, menubar=no, width=${w}, height=${h}, top=${cornerTop}, left=${cornerLeft}`;
         window.removeEventListener('message', receiveMessage);
         if (closedInterval) clearInterval(closedInterval);
