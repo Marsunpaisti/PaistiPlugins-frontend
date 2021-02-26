@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
 import { useLocation} from 'react-router-dom';
 import { LoadingSpinner } from '../components/LoadingSpinner';
+import { oAuthWindowClosed } from '../utils/oauthpopup';
 
 export const DiscordCallbackPage = () => {
-    const p = new URLSearchParams(useLocation().search);
+    const fullHash = useLocation().hash;
+
+    // Remove the first # symbol from the string
+    const p = new URLSearchParams(fullHash.slice(1));
+
+    console.log(useLocation().hash);
 
     const params = {
         provider: 'discord',
@@ -17,6 +23,9 @@ export const DiscordCallbackPage = () => {
         // If this window was opened by another
         if (window.opener){
             window.opener.postMessage(params);
+
+            // Remove the event listener so it wont think it was closed before completion
+            window.removeEventListener('beforeunload', oAuthWindowClosed)
             window.close();
         }
     }, []);

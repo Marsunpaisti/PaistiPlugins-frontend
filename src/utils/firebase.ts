@@ -17,4 +17,4 @@ export const auth = firebase.auth()
 export const storage = firebase.storage()
 export const googleAuthProvider = new firebase.auth.GoogleAuthProvider()
 export const messaging = firebase.messaging()
-export const functions = firebase.functions()
+export const functions = firebase.app().functions('europe-west1');
