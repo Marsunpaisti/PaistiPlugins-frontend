@@ -4,7 +4,6 @@ import { DiscordCallbackPage } from '../pages/DiscordCallbackPage';
 import { LoginPage } from '../pages/LoginPage';
 import { LogoutPage } from '../pages/LogoutPage';
 import { ProfilePage } from '../pages/ProfilePage';
-import { SignupPage } from '../pages/SignupPage';
 import { Layout } from './Layout';
 import { Navbar } from './Navbar';
 
@@ -22,11 +21,6 @@ const routes = [
 	{
 		path: '/login',
 		component: () => <Redirect to="/signin" />,
-		exact: false,
-	},
-	{
-		path: '/signup',
-		component: SignupPage,
 		exact: false,
 	},
 	{

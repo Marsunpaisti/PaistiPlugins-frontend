@@ -1,0 +1,29 @@
+@import "./../shared.scss";
+
+.container {
+	@extend .genericContainer;
+
+	cursor: pointer;
+	svg {
+		width: 100px;
+		height: 100px;
+		margin-top: 10px;
+	}
+
+	&:hover{
+		background-color: rgb(50, 50, 50);
+	}
+}
+
+.container.spinner{
+	min-height: 235px;
+}
+
+.loginTitle {
+	@extend .genericTitle;
+}
+
+.spinnerTitle {
+	@extend .genericTitle;
+	font-size: 20px;
+}

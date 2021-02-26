@@ -1,20 +1,11 @@
 import { swapDiscordToken } from './api';
 import { auth } from './firebase';
 let oAuthWindow: Window | null = null;
-let oAuthPromise: Promise<void> | null = null;
-
-// This listener is ran when the popup is closed
-export function oAuthWindowClosed (this: Window, _event: any) {
-    if (this.opener){
-        this.opener.postMessage({closedPrematurely: true});
-        this.close();
-    }
-
-    return;
-}
 
 export const signInWithDiscord = async () => {
-    oAuthPromise = new Promise<void>((resolve, reject) => {
+    const oAuthPromise = new Promise<void>((resolve, reject) => {
+        let closedInterval: NodeJS.Timeout | null = null;
+
         // This listener is in the parent window to receive comms from the popup
         const receiveMessage = async (event: MessageEvent<any>) => {
             // Security check
@@ -24,27 +15,42 @@ export const signInWithDiscord = async () => {
 
             // Another security check
             if (event.source === oAuthWindow) {
-                console.log('data: ' + JSON.stringify(event.data, undefined, 2));
                 const params = event.data;
-                if (params.closedPrematurely) {
-                    reject('The popup has been closed by user before completion.');
-                } else {
+                if (closedInterval) clearInterval(closedInterval);
+                try {
                     const customToken = await swapDiscordToken(params);
                     await auth.signInWithCustomToken(customToken);
-                    resolve();
+                } catch (e){
+                    reject(e);
+                    return;
                 }
+                resolve();
+                return;
             }
         }
 
-        const windowFeatures = 'toolbar=no, menubar=no, width=600, height=800, top=100, left=200';
+        const parentW = window.outerWidth;
+        const parentH = window.outerHeight;
+        const w = 600;
+        const h = 800
+        const cornerLeft = Math.round(parentW/2 - w/2);
+        const cornerTop = Math.round(parentH/2 - h/2);
+        const windowFeatures = `toolbar=no, menubar=no, width=${w}, height=${h}, top=${cornerTop}, left=${cornerLeft}`;
         window.removeEventListener('message', receiveMessage);
+        if (closedInterval) clearInterval(closedInterval);
         if (!oAuthWindow || oAuthWindow.closed) {
             oAuthWindow = window.open(process.env.REACT_APP_DISCORD_OAUTH_URL, 'OAUTH_POPUP_DISCORD', windowFeatures);
-            oAuthWindow?.addEventListener('beforeunload', oAuthWindowClosed)
         } else {
             oAuthWindow.focus();
         }
     
+        closedInterval = setInterval(() => {
+            if (!oAuthWindow || oAuthWindow.closed){
+                reject(new Error('The popup has been closed by the user before finalizing the operation.'))
+                if (closedInterval) clearInterval(closedInterval);
+            }
+        }, 500);
+
         window.addEventListener('message', receiveMessage);
     })
 

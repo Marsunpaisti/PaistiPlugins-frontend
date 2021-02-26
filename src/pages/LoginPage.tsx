@@ -1,10 +1,10 @@
 import React from 'react';
-import { LoginBox } from '../components/LoginBox';
+import { DiscordLoginBox } from '../components/DiscordLoginBox';
 
 export const LoginPage = () => {
 	return (
 		<>
-			<LoginBox />
+			<DiscordLoginBox />
 		</>
 	);
 };

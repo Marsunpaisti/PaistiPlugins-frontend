@@ -1,8 +1,7 @@
 import React, { useContext, useState } from 'react'
 import css from './LoginBox.module.scss'
-import { ReactComponent as GoogleLogo } from './../assets/google-icon.svg'
 import { ReactComponent as DiscordLogo } from './../assets/discord-icon.svg'
-import { auth, googleAuthProvider } from '../utils/firebase'
+import { auth } from '../utils/firebase'
 import { MainContext } from '../contexts/MainContext'
 import { Alert } from './Alert'
 import { LoadingSpinner } from './LoadingSpinner'
@@ -36,18 +35,6 @@ export const LoginBox = () => {
 		} catch (e) {
 			setError(e.message)
 			console.error('Error in email+pass login: ' + e)
-		}
-		setLoading(false);
-	}
-
-	const googleLogin = async () => {
-        setError('');
-		try {
-			setLoading(true);
-			await auth.signInWithPopup(googleAuthProvider)
-		} catch (e) {
-			setError(e.message)
-			console.error('Error in google login: ' + e)
 		}
 		setLoading(false);
 	}
@@ -101,13 +88,6 @@ export const LoginBox = () => {
 			</div>
 			<p className={css.ortext}>OR</p>
 			<div className={css.oauth}>
-				<button
-					className={css.oauthbutton}
-					onClick={() => googleLogin()}
-				>
-					<GoogleLogo />
-					Sign in with Google
-				</button>
 				<button
 					className={css.oauthbutton}
 					onClick={() => discordLogin()}

@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
 import css from './LoginBox.module.scss';
-import { ReactComponent as GoogleLogo } from './../assets/google-icon.svg';
-import { auth, googleAuthProvider } from '../utils/firebase';
+import { auth } from '../utils/firebase';
+import { ReactComponent as DiscordLogo } from './../assets/discord-icon.svg'
 import { Redirect } from 'react-router';
 import { MainContext } from '../contexts/MainContext';
 import { Alert } from './Alert';
 import { LoadingSpinner } from './LoadingSpinner';
 import classNames from 'classnames/bind'
+import { signInWithDiscord } from '../utils/oauthpopup';
 const classes = classNames.bind(css);
 
 export const SignupBox = () => {
@@ -28,6 +29,18 @@ export const SignupBox = () => {
 	const onPasswordAgainChanged = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setPasswordAgain(e.target.value);
 	};
+	
+	const discordLogin = async () => {
+        setError('');
+		try {
+			setLoading(true);
+			await signInWithDiscord();
+		} catch (e) {
+			setError(e.message)
+			console.error('Error in discord login: ' + e)
+		}
+		setLoading(false);
+	}
 
 	const emailSignup = async () => {
         setError('');
@@ -46,19 +59,6 @@ export const SignupBox = () => {
 			console.error('Error in login: ' + e)
 		}
 		setLoading(false);
-	};
-
-	const googleLogin = async () => {
-        setError('');
-		try {
-			setLoading(true);
-			await auth.signInWithPopup(googleAuthProvider);
-			setLoading(false);
-		} catch (e) {
-			setLoading(false);
-			setError(e.message)
-			console.error('Error in login: ' + e)
-		}
 	};
 
 	if (authenticated) {
@@ -87,9 +87,12 @@ export const SignupBox = () => {
 			</div>
 			<p className={css.ortext}>OR</p>
 			<div className={css.oauth}>
-				<button className={css.oauthbutton} onClick={() => googleLogin()}>
-					<GoogleLogo />
-					Sign up with Google
+				<button
+					className={css.oauthbutton}
+					onClick={() => discordLogin()}
+				>
+					<DiscordLogo />
+					Sign in with Discord
 				</button>
 			</div>
 		</div>
