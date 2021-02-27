@@ -9,7 +9,12 @@ export const signInWithDiscord = async () => {
         // This listener is in the parent window to receive comms from the popup
         const receiveMessage = async (event: MessageEvent<any>) => {
             // Security check
-            if (event.origin !== process.env.REACT_APP_BASE_URL) {
+            if (event.origin !== process.env.REACT_APP_ORIGIN
+                && event.origin !== process.env.REACT_APP_ORIGIN2
+                && event.origin !== 'http://localhost:3000'
+                && event.origin !== 'https://localhost:5000' 
+                && event.origin !== 'http://localhost:5000'
+                && event.origin !== 'https://localhost:5000') {
                 return;
             }
 
@@ -36,10 +41,12 @@ export const signInWithDiscord = async () => {
         const cornerLeft = window.screenLeft + Math.round(parentW/2 - w/2);
         const cornerTop = window.screenTop + Math.round(parentH/2 - h/2);
         const windowFeatures = `toolbar=no, menubar=no, width=${w}, height=${h}, top=${cornerTop}, left=${cornerLeft}`;
+        const redirectUrl = encodeURIComponent(window.origin + '/discordcallback')
+        const oauthUrl = `https://discord.com/api/oauth2/authorize?client_id=814586243588947968&redirect_uri=${redirectUrl}&response_type=token&scope=identify%20email`
         window.removeEventListener('message', receiveMessage);
         if (closedInterval) clearInterval(closedInterval);
         if (!oAuthWindow || oAuthWindow.closed) {
-            oAuthWindow = window.open(process.env.REACT_APP_DISCORD_OAUTH_URL, 'OAUTH_POPUP_DISCORD', windowFeatures);
+            oAuthWindow = window.open(oauthUrl, 'OAUTH_POPUP_DISCORD', windowFeatures);
         } else {
             oAuthWindow.focus();
         }

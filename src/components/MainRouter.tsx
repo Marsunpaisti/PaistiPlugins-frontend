@@ -51,7 +51,7 @@ export const MainRouter = () => {
 			<Navbar />
 			<Layout>
 				{routes.map((r) => (
-					<Route exact={r.exact} path={r.path} component={r.component} />
+					<Route exact={r.exact} path={r.path} component={r.component} key={r.path} />
 				))}
 			</Layout>
 		</BrowserRouter>

@@ -9,7 +9,6 @@ export type SwapDiscordTokenRequest = {
 
 
 export const swapDiscordToken = async (params: SwapDiscordTokenRequest): Promise<string> => {
-    //const res = await axios.post('https://europe-west1-paistiplugins.cloudfunctions.net/api/v1/oauth/discord', params);
     const res = await functions.httpsCallable('swapDiscordToken')(params);
     return res.data.token;
 }
