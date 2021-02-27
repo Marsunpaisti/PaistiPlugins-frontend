@@ -52,6 +52,14 @@ $COLOR_ERROR_BORDER: rgb(70, 70, 70);
 	margin-bottom: 15px;
 }
 
+.fadein {
+	animation: fadeIn ease 200ms;
+	-webkit-animation: fadeIn ease 200ms;
+	-moz-animation: fadeIn ease 200ms;
+	-o-animation: fadeIn ease 200ms;
+	-ms-animation: fadeIn ease 200ms;
+}
+
 @keyframes fadeIn {
 0% {opacity:0;}
 100% {opacity:1;}

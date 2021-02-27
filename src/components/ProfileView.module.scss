@@ -2,18 +2,18 @@
 
 .container {
 	@extend .genericContainer;
+}
 
-	button:first-of-type{
-		margin-top: 20px;	
+.buttonGroup{
+	margin-top: 35px;
+	min-width: 100%;
+
+	& > * {
+		margin-top: 5px;
 	}
 
-	.alert{
-		min-width: 100%;
-		margin-top: 20px;
-	}
-
-	button {
-		margin-top: 4px;
+	:first-child {
+		margin-top: 0px;
 	}
 }
 

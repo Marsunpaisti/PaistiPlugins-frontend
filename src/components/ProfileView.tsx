@@ -3,6 +3,7 @@ import { Redirect } from 'react-router-dom';
 import { MainContext } from '../contexts/MainContext';
 import { auth } from '../utils/firebase';
 import { Alert } from './Alert';
+import { ApiKeyGenerator } from './ApiKeyGenerator';
 import { LoadingSpinner } from './LoadingSpinner';
 import css from './ProfileView.module.scss';
 
@@ -61,7 +62,7 @@ export const ProfileView: React.FC = () => {
         </span>
 
         {!isLoading && (
-        <>
+        <div className={css.buttonGroup}>
             { error.length > 0 && (
                 <div className={css.alert}>
                     <Alert type="error" message={error} onClick={() => setError('')}/>
@@ -72,9 +73,10 @@ export const ProfileView: React.FC = () => {
                     <Alert type="info" message={info} onClick={() => setInfo('')}/>
                 </div>
             )}
+            <ApiKeyGenerator/>
             {!user?.emailVerified && <button onClick={() => emailVerification()}>Send email verification link</button>}
             <button onClick={() => auth.signOut()}>Sign out</button>
-        </>
+        </div>
         )}
         {isLoading && 
         <div className={css.spinnerContainer}>

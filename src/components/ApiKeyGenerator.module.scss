@@ -1,0 +1,26 @@
+@import "./../shared.scss";
+
+.secretKeyLabelDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 35px;
+}
+
+.secretKeyLabel {
+    color: $COLOR_INFO_TEXT;
+    font-size: 80%;
+    user-select: none;
+}
+
+.secretKeyField {
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.spinnerContainer {
+    min-height: 77px;
+    max-height: 77px;
+}

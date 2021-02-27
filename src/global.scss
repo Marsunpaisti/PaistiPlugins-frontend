@@ -44,28 +44,36 @@ body {
 
 	&::selection,
 	::-moz-selection {
-		background: $COLOR_DARK1;
+		background: black;
 	}
 }
 
 input {
-	border: 1px solid $COLOR_INPUT_BORDER;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Heebo";
+	font-weight: bold;
+	border: 2px solid $COLOR_INPUT_BORDER;
 	background-color: $COLOR_DARK3;
 	border-radius: 4px;
 	min-height: 35px;
-	padding-left: 35px;
-	font-family: "Heebo";
+	min-width: 100%;
+	outline: none !important;		
+	padding-left: 32px;
+	padding-top: 5px;
+	box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81) inset;
+	-webkit-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81) inset;
+	-moz-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81) inset;
 
 	&:focus {
 		outline: none !important;
-		border: 4px solid $COLOR_INPUT_BORDER_FOCUS;
-		padding-left: 32px;
+		border: 2px solid $COLOR_INPUT_BORDER_FOCUS;
 	}
 
 	&:hover {
 		background-color: $COLOR_DARK4;
 		border: 2px solid $COLOR_INPUT_BORDER_FOCUS;
-		padding-left: 34px;
 	}
 }
 
