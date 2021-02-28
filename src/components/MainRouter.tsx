@@ -5,6 +5,7 @@ import { HomePage } from '../pages/HomePage';
 import { LoginPage } from '../pages/LoginPage';
 import { LogoutPage } from '../pages/LogoutPage';
 import { ProfilePage } from '../pages/ProfilePage';
+import { StorePage } from '../pages/StorePage';
 import { Layout } from './Layout';
 import { Navbar } from './Navbar';
 
@@ -17,6 +18,11 @@ const routes = [
 	{
 		path: '/signin',
 		component: LoginPage,
+		exact: false,
+	},
+	{
+		path: '/store',
+		component: StorePage,
 		exact: false,
 	},
 	{

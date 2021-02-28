@@ -1,0 +1,28 @@
+@import "./../shared.scss";
+
+.categoryContainer {
+    @extend .genericContainer;
+    background-color: rgba(0, 0, 0, 0);
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding: 0;
+    margin-bottom: 20px;
+    div {
+        margin: 10px
+    }
+}
+
+.productsContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.categoryTitle {
+    @extend .genericTitle;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    text-transform: none;
+}

@@ -1,0 +1,38 @@
+@import "./../shared.scss";
+
+.container {
+	@extend .genericContainer;
+	padding: 10px;
+	max-width: 300px;
+	min-height: 380px;
+	background-color: rgba(0, 0, 0, 0.8);
+	justify-content: flex-start;
+	border-radius: 5px;
+	user-select: none;
+	box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81);
+	-webkit-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81);
+	-moz-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81);
+	cursor: pointer;
+	img {
+		max-width: 280px;
+		height: auto;
+	}
+
+	
+	&:hover{
+		background-color: $COLOR_DARK1;
+	}
+}
+
+.title {
+	margin: 4px;
+	font-weight: bold;
+	font-size: 130%;
+}
+
+.description {
+	display: flex;
+	flex-grow: 1;
+	justify-content: center;
+	align-items: center;
+}

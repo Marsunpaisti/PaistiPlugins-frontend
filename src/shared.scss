@@ -1,20 +1,38 @@
 // Shared colors
 $COLOR_DARK1: rgb(20, 20, 20);
+$COLOR_DARK1_BORDER: adjust-color($COLOR_DARK1, -4, -4, -4);
+$COLOR_DARK1_HOVER: adjust-color($COLOR_DARK1, 12, 12, 12);
+$COLOR_DARK1_HOVER_BORDER: adjust-color($COLOR_DARK1_HOVER, -4, -4, -4);
+
+
 $COLOR_DARK2: rgb(33, 33, 33);
-$COLOR_DARK3: rgb(60, 60, 60);
-$COLOR_DARK4: rgb(70, 70, 70);
-$COLOR_DARK5: rgb(80, 80, 80);
-$COLOR_DARK2_BORDER: adjust-color($COLOR_DARK2, -3, -3, -3);
+$COLOR_DARK2_BORDER: adjust-color($COLOR_DARK2, -4, -4, -4);
 $COLOR_DARK2_HOVER: adjust-color($COLOR_DARK2, 12, 12, 12);
-$COLOR_DARK2_HOVER_BORDER: adjust-color($COLOR_DARK2_HOVER, -3, -3, -3);
+$COLOR_DARK2_HOVER_BORDER: adjust-color($COLOR_DARK2_HOVER, -4, -4, -4);
+
+$COLOR_DARK3: rgb(60, 60, 60);
+$COLOR_DARK3_BORDER: adjust-color($COLOR_DARK3, -4, -4, -4);
+$COLOR_DARK3_HOVER: adjust-color($COLOR_DARK3, 12, 12, 12);
+$COLOR_DARK3_HOVER_BORDER: adjust-color($COLOR_DARK3_HOVER, -4, -4, -4);
+
+$COLOR_DARK4: rgb(70, 70, 70);
+$COLOR_DARK4_BORDER: adjust-color($COLOR_DARK4, -4, -4, -4);
+$COLOR_DARK4_HOVER: adjust-color($COLOR_DARK4, 12, 12, 12);
+$COLOR_DARK4_HOVER_BORDER: adjust-color($COLOR_DARK4_HOVER, -4, -4, -4);
+
+$COLOR_DARK5: rgb(80, 80, 80);
+$COLOR_DARK5_BORDER: adjust-color($COLOR_DARK5, -4, -4, -4);
+$COLOR_DARK5_HOVER: adjust-color($COLOR_DARK5, 12, 12, 12);
+$COLOR_DARK5_HOVER_BORDER: adjust-color($COLOR_DARK5_HOVER, -4, -4, -4);
+
 $COLOR_INPUT_BORDER: rgb(45, 45, 45);
 $COLOR_INPUT_BORDER_FOCUS: rgb(60, 60, 60);
 $COLOR_TEXT: rgb(245, 245, 245);
 $COLOR_NAVBAR: $COLOR_DARK2;
+
 // Alert colors
 $COLOR_INFO_TEXT: rgb(8, 235, 235);
 $COLOR_ERROR_TEXT: rgb(252, 54, 54);
-
 $COLOR_ERROR_HOVER: rgb(90, 90, 90);
 $COLOR_ERROR: rgb(80, 80, 80);
 $COLOR_ERROR_BORDER: rgb(70, 70, 70);
