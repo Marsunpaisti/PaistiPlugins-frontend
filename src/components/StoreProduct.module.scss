@@ -5,7 +5,7 @@
 	padding: 10px;
 	max-width: 300px;
 	min-height: 380px;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: rgba(0, 0, 0, 0.7);
 	justify-content: flex-start;
 	border-radius: 5px;
 	user-select: none;
@@ -14,11 +14,10 @@
 	-moz-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81);
 	cursor: pointer;
 	img {
-		width: 280px;
+		min-width: 280px;
 		max-width: 280px;
-		height: 225px;
+		min-height: 225px;
 		max-height: 225px;
-		height: auto;
 	}
 
 	

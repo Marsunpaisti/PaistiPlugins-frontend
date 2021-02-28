@@ -13,6 +13,20 @@ export const HomePage = () => {
 			</div>
 
 			<div className={classes(css.textGroups)}>
+								
+				<div>
+					<div className={classes(css.faqTitle)}>
+						Contact
+					</div>
+					<p>
+						You can find me at the Illumine Plugins discord
+					</p>
+					<p>
+						<a className="link" href="https://discord.com/invite/9fGzEDR" target="_blank" rel="noreferrer">https://discord.com/invite/9fGzEDR</a>
+					</p>
+				</div>
+			
+
 				<div>
 					<div className={classes(css.faqTitle)}>
 						What are external plugins?
@@ -44,24 +58,25 @@ export const HomePage = () => {
 
 				<div>
 					<div className={classes(css.faqTitle)}>
-						Contact
-					</div>
-					<p>
-						You can find me at the Illumine Plugins discord
-					</p>
-					<p>
-						<a className="link" href="https://discord.com/invite/9fGzEDR" target="_blank" rel="noreferrer">https://discord.com/invite/9fGzEDR</a>
-					</p>
-				</div>
-				
-				<div>
-					<div className={classes(css.faqTitle)}>
 						Can I get banned?
 					</div>
 					<p>
 						The game rules forbid software from inputting more than 1 input per 1 user input. This essentially means that
 						the plugins you find here are not allowed by game rules and usage may result in your account getting banned.
 					</p>					
+				</div>
+
+
+				<div>
+					<div className={classes(css.faqTitle)}>
+						Source codes?
+					</div>					
+					<p>
+						The source code of my free plugins as well as my scripting API can be found at
+					</p>
+					<p>
+						<a className="link" href="https://github.com/Marsunpaisti/openosrs-plugins" target="_blank" rel="noreferrer">https://github.com/Marsunpaisti/openosrs-plugins</a>
+					</p>
 				</div>
 
 				<div>
@@ -79,19 +94,6 @@ export const HomePage = () => {
 						resulting from the use, misuse, or inability to use this software, even if I have been advised of the possibility of such damages.
 					</p>
 				</div>
-					
-				<div>
-					<div className={classes(css.faqTitle)}>
-						Source codes?
-					</div>					
-					<p>
-						The source code of my free plugins as well as my scripting API can be found at
-					</p>
-					<p>
-						<a className="link" href="https://github.com/Marsunpaisti/openosrs-plugins" target="_blank" rel="noreferrer">https://github.com/Marsunpaisti/openosrs-plugins</a>
-					</p>
-				</div>
-
 			</div>
 		</div>
 	);

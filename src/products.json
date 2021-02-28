@@ -2,17 +2,44 @@
     { 
         "title": "AIO Fighter",
         "description": "Free version of PAIOFighter that will automatically fight enemies for you",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/fighter.png?alt=media&token=bf30c36b-b85d-4af5-bf68-7460e88e797d"
+        "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/fighter.png?alt=media&token=bf30c36b-b85d-4af5-bf68-7460e88e797d",
+        "id": "1",
+        "features": [
+            "Eats food",
+            "Safespotting",
+            "Looting",
+            "Stop when out of food",
+            "Check that enemy is reachable",
+            "Intelligent targeting"
+        ]
     },
     { 
         "title": "WebWalker",
         "description": "Walk around Runescape with just one click! Can use travel methods like fairy rings and charter, shortcuts and teleports.",
-        "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/webwalker.png?alt=media&token=442b8775-8568-40a9-ae59-45093a995be7"
+        "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/webwalker.png?alt=media&token=442b8775-8568-40a9-ae59-45093a995be7",
+        "id": "2",
+        "features": [
+            "Handle obstacles",
+            "Fairy rings",
+            "Chartering",
+            "Agility shortcuts",
+            "Gnome glider",
+            "Teleport items"
+        ]
     },
     { 
         "title": "PFighterAIO",
-        "description": "Full version of AIO Fighter. Supports more features like banking, worldhopping and others.",
+        "description": "Full version of AIO Fighter. Supports more features like banking, worldhopping and others. With the license, you can have two instances of the script running at one time.",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/paiofighter.png?alt=media&token=b18e47c5-63f9-43f9-826e-124528b9f49f",
-        "price": "Coming soon!"
+        "price": "Coming soon!",
+        "id": "3",
+        "features": [
+            "Coming soon: Banking",
+            "Coming soon: World hopping",
+            "Coming soon: Configurable breaks",
+            "Coming soon: Special attacks",
+            "Loot before items disappear",
+            "Coming soon: Prayer flicking"
+        ]
     }
 ]

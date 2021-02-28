@@ -1,0 +1,90 @@
+@import "./../shared.scss";
+
+.container {
+	@extend .genericContainer;
+	min-width: 900px;
+	max-width: 900px;
+}
+
+.pictureTextContainer {
+	text-align: start;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	ul {
+		padding-left: 15px;
+		columns: 2;
+		-webkit-columns: 2;
+		-moz-columns: 2;
+		margin-bottom: 0px;
+		margin-top: 0px;
+	}
+
+	li {
+		text-align: start;
+	}
+}
+
+.detailsColumn {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	height: 100%;
+}
+
+.imageColumn {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
+	margin-left: 10px;
+	img {
+		display: flex;
+		flex-grow: 0;
+		min-width: 280px;
+		max-width: 280px;
+		min-height: 225px;
+		max-height: 225px;
+	}
+}
+
+.purchaseDetails {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	flex-grow: 1;
+	flex-basis: content;
+
+	.price {
+		font-size: 30px;
+		margin-top: 30px;
+		margin-bottom: 10px;
+		color: green;
+	}
+
+	button {
+		background-color: rgb(29, 138, 29); //rgb(53, 112, 53);
+	}
+
+	.hide {
+		visibility: hidden;
+	}
+}
+
+.title {
+	@extend .genericTitle;
+}
+
+.featuresTitle {
+	@extend .genericTitle;
+	font-size: 24px;
+	margin-top: 25px;
+	margin-bottom: 5px;
+	margin-left: 10px;
+	padding-left: 0;
+	text-align: start;
+}
+
+.description {
+	margin-left: 10px;
+}

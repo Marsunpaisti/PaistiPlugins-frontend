@@ -11,11 +11,15 @@ html {
 
 }
 
+a {
+	text-decoration: none;
+}
+
 body {	
 	font-family: "Carrois Gothic SC", "Ubuntu", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 	sans-serif;
 	background: url("./assets/bg.jpg") no-repeat center center fixed; 
-	background-position: 0px 0px;
+	background-position: 0px 50px;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -54,6 +58,7 @@ body {
 
 .link {
 	color: blue;
+	text-decoration: underline;
 }
 
 input {
