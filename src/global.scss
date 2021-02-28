@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Carrois+Gothic+SC&display=swap');
 
 html {
-	font-family: "Ubuntu", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+	font-family: "Carrois Gothic SC", "Ubuntu", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
 		sans-serif;
 		
 	background: url("./assets/bg.jpg") no-repeat center center fixed; 
@@ -23,6 +23,7 @@ html {
 }
 
 body {
+	overflow-y: scroll;
 	margin: 0;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -48,12 +49,15 @@ body {
 	}
 }
 
+.link {
+	color: blue;
+}
+
 input {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: "Heebo";
-	font-weight: bold;
+    font-family: "Carrois Gothic SC";
 	border: 2px solid $COLOR_INPUT_BORDER;
 	background-color: $COLOR_DARK3;
 	border-radius: 4px;
@@ -86,8 +90,9 @@ button {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: "Heebo";
+    font-family: "Carrois Gothic SC";
 	font-weight: bold;
+	font-size: 14px;
 	border: 1px solid $COLOR_INPUT_BORDER;
 	background-color: $COLOR_DARK3;
 	border-radius: 4px;

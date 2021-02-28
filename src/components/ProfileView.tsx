@@ -50,7 +50,7 @@ export const ProfileView: React.FC = () => {
 
 	return (
     <div className={css.container}>
-        <span className={css.title}>Profile</span>
+        <span className={css.title}>PROFILE</span>
         <span className={css.entry}>
             {user?.displayName}
         </span>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Redirect, Route } from 'react-router-dom';
 import { DiscordCallbackPage } from '../pages/DiscordCallbackPage';
+import { HomePage } from '../pages/HomePage';
 import { LoginPage } from '../pages/LoginPage';
 import { LogoutPage } from '../pages/LogoutPage';
 import { ProfilePage } from '../pages/ProfilePage';
@@ -10,7 +11,7 @@ import { Navbar } from './Navbar';
 const routes = [
 	{
 		path: '/',
-		component: () => <div>Home</div>,
+		component: HomePage,
 		exact: true,
 	},
 	{
