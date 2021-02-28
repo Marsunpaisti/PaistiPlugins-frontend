@@ -1,9 +1,14 @@
 @import "./../shared.scss";
 
+.container {
+    min-width: 300px;
+    max-width: 300px;
+}
 .secretKeyLabelDiv {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     min-height: 35px;
 }
 
@@ -15,12 +20,15 @@
 
 .secretKeyField {
     padding-left: 0;
+    padding-right: 0;
     text-align: center;
     align-items: center;
     cursor: pointer;
 }
 
 .spinnerContainer {
-    min-height: 77px;
-    max-height: 77px;
+    min-width: 300px;
+    max-width: 300px;
+    min-height: 70px;
+    max-height: 70px;
 }

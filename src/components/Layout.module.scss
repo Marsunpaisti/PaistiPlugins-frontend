@@ -1,8 +1,19 @@
+@import "./../shared.scss";
+
 .container {
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	margin-top: 80px;
+	padding-top: 60px;
 	flex-grow: 1;
+	overflow-y: scroll;
+
+	& > * {
+		animation: fadeIn ease 300ms;
+		-webkit-animation: fadeIn ease 300ms;
+		-moz-animation: fadeIn ease 300ms;
+		-o-animation: fadeIn ease 300ms;
+		-ms-animation: fadeIn ease 300ms;
+	}
 }

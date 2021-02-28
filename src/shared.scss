@@ -28,17 +28,18 @@ $COLOR_ERROR_BORDER: rgb(70, 70, 70);
 	justify-content: center;
 	align-items: center;
 	text-align: center;
-	min-width: 400px;
-	max-width: 400px;
-	border-radius: 10px;
+	/*
 	box-shadow: 6px 7px 12px -7px rgba(0, 0, 0, 0.66);
 	-webkit-box-shadow: 6px 7px 12px -7px rgba(0, 0, 0, 0.66);
 	-moz-box-shadow: 6px 7px 12px -7px rgba(0, 0, 0, 0.66);
-	background-color: $COLOR_DARK2;
+	border: 3px solid $COLOR_DARK2_BORDER;
+	*/
+	border-radius: 10px;
+	background-color: adjust-color(black, $alpha: -0.5);
+	border: 0;
 	padding: 35px;
 	padding-left: 35px;
 	padding-right: 35px;
-	border: 3px solid $COLOR_DARK2_BORDER;
 
 	animation: fadeIn ease 200ms;
 	-webkit-animation: fadeIn ease 200ms;
@@ -51,14 +52,15 @@ $COLOR_ERROR_BORDER: rgb(70, 70, 70);
 	text-transform: uppercase;
 	font-size: 34px;
 	margin-bottom: 15px;
+    text-align: center;
 }
 
 .fadein {
-	animation: fadeIn ease 200ms;
-	-webkit-animation: fadeIn ease 200ms;
-	-moz-animation: fadeIn ease 200ms;
-	-o-animation: fadeIn ease 200ms;
-	-ms-animation: fadeIn ease 200ms;
+	animation: fadeIn ease 300ms;
+	-webkit-animation: fadeIn ease 300ms;
+	-moz-animation: fadeIn ease 300ms;
+	-o-animation: fadeIn ease 300ms;
+	-ms-animation: fadeIn ease 300ms;
 }
 
 @keyframes fadeIn {

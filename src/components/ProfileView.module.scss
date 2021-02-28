@@ -2,6 +2,7 @@
 
 .container {
 	@extend .genericContainer;
+	min-width: 370px;
 }
 
 .buttonGroup{

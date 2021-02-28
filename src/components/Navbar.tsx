@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 import css from './Navbar.module.scss';
 import { ReactComponent as KaakkiLogo } from './../assets/kaakki.svg';
 import { MainContext } from '../contexts/MainContext';
+import BGImage from '../assets/bg.jpg'
 
 export const Navbar: React.FC = () => {
 	const { authenticated } = useContext(MainContext);
 	return (
 		<nav className={css.navbar}>
+			<img className={css.bgimg} src={BGImage} alt="background"/>
 			<Link to={'/'} className={css.logotitlecontainer}>
 				<KaakkiLogo className={css.logo} />
 				<span className={css.title}>PAISTI PLUGINS</span>

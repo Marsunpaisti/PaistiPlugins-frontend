@@ -30,13 +30,16 @@ export const ApiKeyGenerator: React.FC = () => {
     }
     if (key.length > 0){
         return (
-            <>
+            <div className={css.container}>
                 <div className={css.secretKeyLabelDiv}>
                     <span className={classes(css.secretKeyLabel, 'fadein')}>{keyLabel}</span>
                 </div>
                 <input className={css.secretKeyField} type="text" value={key} onFocus={() => copyToClipboard()}/>
-            </>
+            </div>
         )
     }
-    return (<button onClick={() => generateKey()}>Generate secret API key</button> );
+    return (
+        <div className={css.container}>
+            <button onClick={() => generateKey()}>Generate secret API key</button> 
+        </div>);
 }

@@ -9,11 +9,19 @@
 	align-items: center;
 	min-height: 50px;
 	max-height: 50px;
-	min-width: 100%;
-	background-color: $COLOR_DARK2;
-	box-shadow: -1px -27x 57px -4px rgba(0, 0, 0, 0.75);
-	-webkit-box-shadow: -1px -27px 57px -4px rgba(0, 0, 0, 0.75);
-	-moz-box-shadow: -1px -27px 57px -4px rgba(0, 0, 0, 0.75);
+	min-width: 100%;		
+
+	.bgimg {
+		z-index: 5;
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: 100vw;      
+		//-webkit-mask-image:-webkit-gradient(linear, top, bottom, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)));
+		mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 55px, rgba(0,0,0,0) 90px);
+		pointer-events: none;
+		cursor: default;
+	}
 }
 
 .logotitlecontainer {
@@ -22,7 +30,6 @@
 	padding-left: 60px;
 	font-family: "Ubuntu Mono";
 	text-decoration: none;
-	background-color: $COLOR_DARK2;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -30,16 +37,19 @@
 }
 
 .logo {
+	z-index: 10;
 	height: 50px;
 	width: 50px;
 	margin-right: 25px;
 }
 
 .title {
+	z-index: 10;
 	font-size: 32px;
 }
 
 .navButton {
+	z-index: 10;
 	font-family: "Carrois Gothic SC";
 	text-transform: uppercase;
 	line-height: 1cm;
@@ -53,6 +63,6 @@
 	font-weight: bold;
 
 	&:hover {
-		background-color: $COLOR_DARK2_HOVER;
+		text-decoration: underline;
 	}
 }
