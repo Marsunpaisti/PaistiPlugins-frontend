@@ -14,7 +14,10 @@
 	-moz-box-shadow: 3px 4px 18px -1px rgba(0,0,0,0.81);
 	cursor: pointer;
 	img {
+		width: 280px;
 		max-width: 280px;
+		height: 225px;
+		max-height: 225px;
 		height: auto;
 	}
 
@@ -32,7 +35,13 @@
 
 .description {
 	display: flex;
+	flex-direction: column;
 	flex-grow: 1;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
+	font-size: 90%;
+}
+
+.price {
+	color: green
 }
