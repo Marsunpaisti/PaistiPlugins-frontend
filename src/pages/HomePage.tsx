@@ -50,7 +50,7 @@ export const HomePage = () => {
 						You can find me at the Illumine Plugins discord
 					</p>
 					<p>
-						<a className="link" href="https://discord.com/invite/9fGzEDR">https://discord.com/invite/9fGzEDR</a>
+						<a className="link" href="https://discord.com/invite/9fGzEDR" target="_blank" rel="noreferrer">https://discord.com/invite/9fGzEDR</a>
 					</p>
 				</div>
 				
@@ -88,7 +88,7 @@ export const HomePage = () => {
 						The source code of my free plugins as well as my scripting API can be found at
 					</p>
 					<p>
-						<a className="link" href="https://github.com/Marsunpaisti/openosrs-plugins">https://github.com/Marsunpaisti/openosrs-plugins</a>
+						<a className="link" href="https://github.com/Marsunpaisti/openosrs-plugins" target="_blank" rel="noreferrer">https://github.com/Marsunpaisti/openosrs-plugins</a>
 					</p>
 				</div>
 
