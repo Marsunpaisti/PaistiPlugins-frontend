@@ -16,7 +16,7 @@ export const StorePage = () => {
     }
 
     return (
-        <>
+        <div className={css.container}>
             <div className={css.categoryContainer}>
                 <span className={css.categoryTitle}>Free plugins</span>
                 <div className={css.productsContainer}>
@@ -29,6 +29,6 @@ export const StorePage = () => {
                     {products.filter(p => p.price).map((p) => <StoreProduct {...p} key={p.title}/>)}
                 </div>
             </div>
-        </>
+        </div>
     )
 };
