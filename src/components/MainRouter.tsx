@@ -1,9 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Redirect, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import { DiscordCallbackPage } from '../pages/DiscordCallbackPage';
 import { HomePage } from '../pages/HomePage';
 import { LoginPage } from '../pages/LoginPage';
 import { LogoutPage } from '../pages/LogoutPage';
+import { PaymentSuccessPage } from '../pages/PaymentSuccessPage';
 import { ProfilePage } from '../pages/ProfilePage';
 import { StorePage } from '../pages/StorePage';
 import { Layout } from './Layout';
@@ -26,18 +27,8 @@ const routes = [
 		exact: false,
 	},
 	{
-		path: '/login',
-		component: () => <Redirect to="/signin" />,
-		exact: false,
-	},
-	{
 		path: '/signout',
 		component: LogoutPage,
-		exact: false,
-	},
-	{
-		path: '/logout',
-		component: () => <Redirect to="/signout" />,
 		exact: false,
 	},
 	{
@@ -50,6 +41,11 @@ const routes = [
 		component: DiscordCallbackPage,
 		exact: false,
 	},
+	{
+		path: '/paymentsuccess',
+		component: PaymentSuccessPage,
+		exact: false
+	}
 ];
 
 export const MainRouter = () => {

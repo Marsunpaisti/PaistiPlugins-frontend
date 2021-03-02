@@ -1,7 +1,9 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import css from './ProductDetails.module.scss';
 import classNames from 'classnames/bind'
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
+import { startCheckout } from '../utils/stripe';
+import { MainContext } from '../contexts/MainContext';
 const classes = classNames.bind(css)
 
 export interface ProductDetailsProps {
@@ -11,9 +13,27 @@ export interface ProductDetailsProps {
     id: string;
     price?: string;
     features?: string[];
+    priceId?: string;
 }
 
-export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, description, price, features}) => {
+export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, description, price, features, priceId}) => {
+    const { authenticated } = useContext(MainContext);
+    const history = useHistory();
+    const location = useLocation();
+    const onBuyButtonClick = () => {
+        if (!priceId) return;
+        if (!authenticated) {
+            const redirect = location.pathname + location.search;
+            history.push('/signin#redirect=' + encodeURIComponent(redirect));
+            return;
+        }
+
+        startCheckout([{
+            price: priceId,
+            quantity: 1
+        }])
+    }
+
 	return (
         <div className={css.container}>
             <div className={css.pictureTextContainer}>
@@ -23,7 +43,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, des
                     <span className={css.featuresTitle}>Features</span>
                     <ul>
                         {
-                            features && features.map(f => <li>{f}</li>)
+                            features && features.map(f => <li key={f}>{f}</li>)
                         }
                     </ul>
                     <span className={css.featuresTitle}>How to use</span>
@@ -34,7 +54,7 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, des
                     <img src={image} alt={title}/>
                     <div className={css.purchaseDetails}>
                         <span className={css.price}>{price ? price : 'Free'}</span>
-                        <button className={classes(css.button, {hide: !price})}>Purchase license</button>
+                        <button className={classes(css.button, {hide: !price})} onClick={() => onBuyButtonClick()}>{authenticated ? 'Purchase license' : 'Sign in & Purchase'}</button>
                     </div>
                 </div>
             </div>

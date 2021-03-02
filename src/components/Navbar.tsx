@@ -25,7 +25,7 @@ export const Navbar: React.FC = () => {
 					</Link>
 				)}
 				{authenticated && (
-					<Link to={'/logout'} className={css.navButton}>
+					<Link to={'/signout'} className={css.navButton}>
 						Logout
 					</Link>
 				)}

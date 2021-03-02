@@ -1,0 +1,6 @@
+@import "./../shared.scss";
+
+.title {
+    @extend .genericTitle;
+    text-transform: none;
+}

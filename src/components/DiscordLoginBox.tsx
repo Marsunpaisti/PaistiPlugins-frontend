@@ -1,16 +1,13 @@
-import React, { useContext, useState } from 'react'
+import React, { useState } from 'react'
 import css from './DiscordLoginBox.module.scss'
 import { ReactComponent as DiscordLogo } from './../assets/discord-icon-text.svg'
-import { MainContext } from '../contexts/MainContext'
 import { LoadingSpinner } from './LoadingSpinner'
 import classNames from 'classnames/bind'
-import { Redirect } from 'react-router'
 import { signInWithDiscord } from '../utils/oauthpopup'
 
 const classes = classNames.bind(css)
 
-export const DiscordLoginBox = () => {
-	const { authenticated } = useContext(MainContext)
+export const DiscordLoginBox: React.FC = () => {
 	const [_error, setError] = useState('');
 	const [isLoading, setLoading] = useState(false);
 	const discordLogin = async () => {
@@ -23,11 +20,6 @@ export const DiscordLoginBox = () => {
 			console.error('Error in discord login: ' + e)
 		}
 		setLoading(false);
-	}
-
-
-	if (authenticated) {
-		return <Redirect to={'/profile'} />;
 	}
 
 	if (isLoading){
