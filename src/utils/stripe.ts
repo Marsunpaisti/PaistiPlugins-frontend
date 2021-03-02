@@ -13,7 +13,12 @@ export const startCheckout = async (items: StripeItem[]) => {
         throw new Error('Stripe is not initialized!');
     }
 
-    const res = await functions.httpsCallable('stripeCreateSession')({line_items: items});
+    let res;
+    try {
+        res = await functions.httpsCallable('stripeCreateSession')({line_items: items});
+    } catch (e){
+        throw new Error('Unable to initiate payment');
+    }
     const checkoutResult = await (await stripeInstance)?.redirectToCheckout({
         sessionId: res.data
     });

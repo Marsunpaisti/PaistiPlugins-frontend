@@ -2,14 +2,18 @@
 
 .container {
 	@extend .genericContainer;
-	min-width: 900px;
+	
 	max-width: 900px;
 }
 
 .pictureTextContainer {
 	text-align: start;
 	display: flex;
-	flex-direction: row;
+	flex-direction: row;        
+	
+	@media only screen and (max-width: 730px) {
+		flex-direction: column-reverse;
+	}
 	width: 100%;
 	ul {
 		padding-left: 15px;
@@ -34,7 +38,10 @@
 
 .imageColumn {
 	display: flex;
-	flex-direction: column;
+	flex-direction: column;	
+	align-items: center;
+	@media only screen and (max-width: 730px) {
+	}
 	flex-grow: 1;
 	margin-left: 10px;
 	img {
@@ -63,7 +70,11 @@
 	}
 
 	button {
-		background-color: rgb(29, 138, 29); //rgb(53, 112, 53);
+		background-color: rgb(29, 138, 29); //rgb(53, 112, 53);	
+		
+		@media only screen and (max-width: 730px) {
+			margin-bottom: 40px;
+		}	
 	}
 
 	.hide {
@@ -87,4 +98,21 @@
 
 .description {
 	margin-left: 10px;
+}
+
+.spinnerContainer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	max-height: 35px;
+	min-width: 35px;
+	width: 100%;
+	@media only screen and (max-width: 730px) {
+		margin-bottom: 40px;
+	}	
+}
+
+.alert {
+	margin-bottom: 10px
 }

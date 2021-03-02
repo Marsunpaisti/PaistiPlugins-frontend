@@ -1,9 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import css from './ProductDetails.module.scss';
 import classNames from 'classnames/bind'
 import { Link, useHistory, useLocation } from 'react-router-dom';
 import { startCheckout } from '../utils/stripe';
 import { MainContext } from '../contexts/MainContext';
+import { LoadingSpinner } from './LoadingSpinner';
+import { Alert } from './Alert';
 const classes = classNames.bind(css)
 
 export interface ProductDetailsProps {
@@ -20,7 +22,10 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, des
     const { authenticated } = useContext(MainContext);
     const history = useHistory();
     const location = useLocation();
-    const onBuyButtonClick = () => {
+    const [paymentLoading, setPaymentLoading] = useState(false);
+    const [error, setError] = useState('');
+
+    const onBuyButtonClick = async () => {
         if (!priceId) return;
         if (!authenticated) {
             const redirect = location.pathname + location.search;
@@ -28,10 +33,16 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, des
             return;
         }
 
-        startCheckout([{
-            price: priceId,
-            quantity: 1
-        }])
+        setPaymentLoading(true);
+        try {
+            await startCheckout([{
+                price: priceId,
+                quantity: 1
+            }])
+        } catch (e){
+            setError(e.message);
+        }
+        setPaymentLoading(false);
     }
 
 	return (
@@ -54,7 +65,9 @@ export const ProductDetails: React.FC<ProductDetailsProps> = ({title, image, des
                     <img src={image} alt={title}/>
                     <div className={css.purchaseDetails}>
                         <span className={css.price}>{price ? price : 'Free'}</span>
-                        <button className={classes(css.button, {hide: !price})} onClick={() => onBuyButtonClick()}>{authenticated ? 'Purchase license' : 'Sign in & Purchase'}</button>
+                        {!paymentLoading && error.length > 0 && <div className={css.alert}> <Alert message={'Error: ' + error} type="error" onClick={() => setError('')}/> </div>}
+                        {!paymentLoading && <button className={classes(css.button, {hide: !price})} onClick={() => onBuyButtonClick()}>{authenticated ? 'Purchase license' : 'Sign in & Purchase'}</button>}
+                        {paymentLoading && <div className={css.spinnerContainer}><LoadingSpinner size="small"/></div>}
                     </div>
                 </div>
             </div>

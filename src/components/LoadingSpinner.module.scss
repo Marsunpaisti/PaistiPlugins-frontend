@@ -16,6 +16,9 @@
 	&.small{
 		transform: scale(0.5);
 	}
+	&.micro{
+		transform: scale(0.4);
+	}
 }
 .ldsSpinner div {
 	transform-origin: 40px 40px;

@@ -4,7 +4,7 @@ import classNames from 'classnames/bind'
 const classes = classNames.bind(css)
 
 type SpinnerProps =  {
-	size?: 'small' | 'normal' | 'large' | 'huge';
+	size?: 'micro' | 'small' | 'normal' | 'large' | 'huge';
 }
 
 export const LoadingSpinner: React.FC<SpinnerProps> = ({size = 'normal'}) => {

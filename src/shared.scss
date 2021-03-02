@@ -59,6 +59,9 @@ $COLOR_ERROR_BORDER: rgb(70, 70, 70);
 	padding-left: 35px;
 	padding-right: 35px;
 
+	@media only screen and (max-width: 800px) {
+        padding: 2px;
+    }
 	animation: fadeIn ease 200ms;
 	-webkit-animation: fadeIn ease 200ms;
 	-moz-animation: fadeIn ease 200ms;

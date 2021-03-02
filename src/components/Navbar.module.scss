@@ -20,6 +20,11 @@
 	max-height: 50px;
 	min-width: 100%;		
 
+	@media only screen and (max-width: 650px) {
+		justify-content: space-evenly;
+	}
+
+	
 	.bgimg {
 		z-index: 5;
 		position: absolute;
@@ -34,7 +39,10 @@
 	}
 }
 
-.logotitlecontainer {
+.logotitlecontainer {	
+	@media only screen and (max-width: 900px) {
+		display: none;
+	}
 	position: absolute;
 	left: 0px;
 	padding-left: 60px;
@@ -67,10 +75,14 @@
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	justify-content: center;	
 	min-width: 120px;
 	min-height: 50px;
 	font-weight: bold;
+
+	@media only screen and (max-width: 650px) {
+		min-width: 50px;
+	}
 
 	&:hover {
 		text-decoration: underline;
