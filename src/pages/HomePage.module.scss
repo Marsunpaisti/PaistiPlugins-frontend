@@ -41,13 +41,12 @@
 
     p {
         width: 100%;
-        text-align: center;
         margin: 0px;
     }
 
     .faqTitle {
         @extend .genericTitle;
-        text-align: center;
+        text-align: start;
         text-transform: unset;
         margin-bottom: 5px;
         font-size: 18px;
@@ -57,7 +56,6 @@
     img {
         display: flex;
         max-width: 450px;
-        margin: auto;
         margin-top: 12px;    
         @media only screen and (max-width: 650px) {
             max-width: 98vw;

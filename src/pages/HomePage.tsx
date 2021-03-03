@@ -61,8 +61,7 @@ export const HomePage = () => {
 						Can I get banned?
 					</div>
 					<p>
-						The game rules forbid software from inputting more than 1 input per 1 user input. This essentially means that
-						the plugins you find here are not allowed by game rules and usage may result in your account getting banned.
+						Whether automation is allowed by the rules depends on the server you play on. Officially you can only use automation plugins on private servers that permit it.
 					</p>					
 				</div>
 

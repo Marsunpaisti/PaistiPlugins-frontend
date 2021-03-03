@@ -1,0 +1,40 @@
+@import "./../shared.scss";
+
+.container {
+    @extend .genericContainer;
+    max-width: 680px;
+    min-width: 150px;
+    min-height: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+
+    p:first-child{
+        font-weight: bold;
+        font-size: 110%
+    }
+}
+
+.license {
+    @extend .genericContainer;
+    background-color: $COLOR_DARK1;
+    margin: 10px;
+    min-width: 200px;
+    min-height: 200px;
+    padding: 5px;
+}
+
+.title {
+    @extend .genericTitle;
+    font-size: 20px;
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}

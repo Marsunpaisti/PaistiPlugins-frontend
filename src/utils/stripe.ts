@@ -1,7 +1,7 @@
 import { loadStripe } from '@stripe/stripe-js';
 import { functions } from './firebase';
 
-const stripeInstance = loadStripe('pk_test_51IONqNEAKtnsxJlFHONyzduaBs91gLZ2LlwoiyPOdeDWjqvNqeSGm5S9Qq1xNobvHgIpm9CagoU5OarYk0aJIFZB00V9sxQaIg');
+const stripeInstance = loadStripe('pk_live_51IONqNEAKtnsxJlFuSWjPfJi5BOW3ZkmmtAbN2oOtilPs3LqgihwlDN6iDZTquaCF6n8qabbUsu7nxJUNLtZL8ZO00hPiKlADz');
 
 export interface StripeItem {
     price: string,
