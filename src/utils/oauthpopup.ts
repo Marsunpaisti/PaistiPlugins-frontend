@@ -56,7 +56,7 @@ export const signInWithDiscord = async () => {
                 reject(new Error('The popup has been closed by the user before finalizing the operation.'))
                 if (closedInterval) clearInterval(closedInterval);
             }
-        }, 500);
+        }, 1000);
 
         window.addEventListener('message', receiveMessage);
     })

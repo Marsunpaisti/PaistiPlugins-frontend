@@ -4,6 +4,7 @@ import { DiscordCallbackPage } from '../pages/DiscordCallbackPage';
 import { HomePage } from '../pages/HomePage';
 import { LoginPage } from '../pages/LoginPage';
 import { LogoutPage } from '../pages/LogoutPage';
+import { MyLicensesPage } from '../pages/MyLicensesPage';
 import { PaymentSuccessPage } from '../pages/PaymentSuccessPage';
 import { ProfilePage } from '../pages/ProfilePage';
 import { StorePage } from '../pages/StorePage';
@@ -44,6 +45,11 @@ const routes = [
 	{
 		path: '/paymentsuccess',
 		component: PaymentSuccessPage,
+		exact: false
+	},
+	{
+		path: '/licenses',
+		component: MyLicensesPage,
 		exact: false
 	}
 ];

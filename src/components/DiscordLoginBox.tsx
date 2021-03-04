@@ -18,8 +18,8 @@ export const DiscordLoginBox: React.FC = () => {
 		} catch (e) {
 			setError(e.message)
 			console.error('Error in discord login: ' + e)
+			setLoading(false);	
 		}
-		setLoading(false);
 	}
 
 	if (isLoading){

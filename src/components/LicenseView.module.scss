@@ -19,11 +19,16 @@
 
 .license {
     @extend .genericContainer;
+    justify-content: space-evenly;
     background-color: $COLOR_DARK1;
     margin: 10px;
     min-width: 200px;
     min-height: 200px;
-    padding: 5px;
+    padding: 3px;
+
+    p {
+        margin: 0
+    }
 }
 
 .title {

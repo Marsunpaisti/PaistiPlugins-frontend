@@ -17,9 +17,12 @@ const devMode = !process.env.NODE_ENV || process.env.NODE_ENV !== 'production'
 export const database = firebase.firestore();
 export const auth = firebase.auth();
 export const functions = firebase.app().functions('europe-west1');
+export const storage = firebase.storage();
 // eslint-disable-next-line no-restricted-globals
+/*
 if (devMode || location.hostname === 'localhost'){
 	database.useEmulator('localhost', 8080);
 	auth.useEmulator('http://localhost:9099');
 	functions.useEmulator('localhost', 5001);
 }
+*/

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import css from './Navbar.module.scss';
-import { ReactComponent as KaakkiLogo } from './../assets/kaakki.svg';
+import KaakkiLogo from './../assets/logo192.png';
 import { MainContext } from '../contexts/MainContext';
 
 export const Navbar: React.FC = () => {
@@ -10,7 +10,7 @@ export const Navbar: React.FC = () => {
 		<nav className={css.wrapper}>
 			<div className={css.navbar}>
 				<Link to={'/'} className={css.logotitlecontainer}>
-					<KaakkiLogo className={css.logo} />
+					<img src={KaakkiLogo} className={css.logo} />
 					<span className={css.title}>PAISTI PLUGINS</span>
 				</Link>
 				<Link to={'/'} className={css.navButton}>
@@ -20,9 +20,14 @@ export const Navbar: React.FC = () => {
 					Store
 				</Link>
 				{authenticated && (
-					<Link to={'/profile'} className={css.navButton}>
-						Profile
-					</Link>
+					<>
+						<Link to={'/profile'} className={css.navButton}>
+							Profile
+						</Link>
+						<Link to={'/licenses'} className={css.navButton}>
+							My Licenses
+						</Link>
+					</>
 				)}
 				{authenticated && (
 					<Link to={'/signout'} className={css.navButton}>
