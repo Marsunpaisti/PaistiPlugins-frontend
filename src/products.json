@@ -35,7 +35,7 @@
         "id": "3",
         "priceId": "price_1IQxz7EAKtnsxJlFRU4535Ze",
         "licenseType": "PFIGHTERAIO",
-        "download": "gs://paistiplugins-releases/pfighteraio-2.0.0.jar",
+        "download": "gs://paistiplugins-releases/pfighteraio-2.1.0.jar",
         "features": [
             "Banking",
             "Loot before items disappear",
