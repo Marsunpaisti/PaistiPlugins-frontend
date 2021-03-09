@@ -2,7 +2,7 @@ import dotenv from 'dotenv-flow';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './global.scss';
-import 'typeface-heebo';
+import './fonts.scss'
 import 'typeface-ubuntu-mono';
 import { MainContextProvider } from './contexts/MainContext';
 import { MainRouter } from './components/MainRouter';

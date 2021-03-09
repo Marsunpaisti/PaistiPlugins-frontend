@@ -4,7 +4,6 @@ import classNames from 'classnames/bind'
 import { database, storage } from '../utils/firebase'
 import { MainContext } from '../contexts/MainContext'
 import { LoadingSpinner } from './LoadingSpinner'
-import axios from 'axios'
 import productJson from '../products.json'
 const classes = classNames.bind(css)
 
@@ -18,17 +17,6 @@ interface LicenseDataAndDownload {
 export const LicenseView: React.FC = () => {
 	const { user } = useContext(MainContext);
 	const [licenses, setLicenses] = useState<LicenseDataAndDownload[] | undefined>(undefined);
-
-
-	const downloadFile = async (downloadUrl: string) => {
-		const authToken = user?.getIdToken;
-		const res = await axios.get(downloadUrl, {
-			headers: {
-				'Authorization': `Bearer ${authToken}`
-			}
-		});
-		return false;
-	}
 
 	useEffect(() => {
 		let unsubscribe: null | (() => void) = null;
@@ -61,7 +49,6 @@ export const LicenseView: React.FC = () => {
 				const awaited = await Promise.all(converted);
 				setLicenses(awaited);
 			})
-			//const res = await database.collection('licenses').doc(user.uid).collection('userLicenses').get();
 		}
 		subscribeToLicenses();
 

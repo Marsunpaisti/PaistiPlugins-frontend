@@ -26,6 +26,7 @@
     "firebase": "^8.2.9",
     "gotham-fonts": "^1.0.3",
     "node-sass": "^5.0.0",
+    "preload-css-webpack-plugin": "^0.2.0",
     "prettier": "^2.2.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -34,7 +35,6 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
     "typeface-arvo": "^1.1.13",
-    "typeface-heebo": "^1.1.13",
     "typeface-ubuntu-mono": "^1.1.13",
     "typescript": "^4.1.2",
     "web-vitals": "^1.0.1"
