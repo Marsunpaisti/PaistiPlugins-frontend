@@ -19,10 +19,10 @@ export const HomePage = () => {
 						Contact
 					</div>
 					<p>
-						You can find me at the Illumine Plugins discord
+						You can find me at my Discord channel
 					</p>
 					<p>
-						<a className="link" href="https://discord.com/invite/9fGzEDR" target="_blank" rel="noreferrer">https://discord.com/invite/9fGzEDR</a>
+						<a className="link" href="https://discord.gg/tT8BQQ8J9G" target="_blank" rel="noreferrer">https://discord.gg/tT8BQQ8J9G</a>
 					</p>
 				</div>
 			

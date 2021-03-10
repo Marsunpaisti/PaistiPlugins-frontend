@@ -1,5 +1,5 @@
 [
-    { 
+    {
         "title": "AIO Fighter",
         "description": "Free version of PAIOFighter that will automatically fight enemies for you",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/fighter.png?alt=media&token=bf30c36b-b85d-4af5-bf68-7460e88e797d",
@@ -13,7 +13,7 @@
             "Intelligent targeting"
         ]
     },
-    { 
+    {
         "title": "WebWalker",
         "description": "Walk around Runescape with just one click! Can use travel methods like fairy rings and charter, shortcuts and teleports.",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/webwalker.png?alt=media&token=442b8775-8568-40a9-ae59-45093a995be7",
@@ -27,7 +27,7 @@
             "Teleport items"
         ]
     },
-    { 
+    {
         "title": "PFighterAIO",
         "description": "Full version of AIO Fighter. Supports more features like banking, worldhopping and others. With the license, you can have two instances of the script running at one time.",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/paiofighter.png?alt=media&token=b18e47c5-63f9-43f9-826e-124528b9f49f",
@@ -35,7 +35,7 @@
         "id": "3",
         "priceId": "price_1IQxz7EAKtnsxJlFRU4535Ze",
         "licenseType": "PFIGHTERAIO",
-        "download": "gs://paistiplugins-releases/pfighteraio-2.3.1.jar",
+        "download": "gs://paistiplugins-releases/pfighteraio-2.4.0.jar",
         "features": [
             "Prayer flicking",
             "Banking",
