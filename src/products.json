@@ -35,7 +35,7 @@
         "id": "3",
         "priceId": "price_1IQxz7EAKtnsxJlFRU4535Ze",
         "licenseType": "PFIGHTERAIO",
-        "download": "gs://paistiplugins-releases/pfighteraio-2.3.0.jar",
+        "download": "gs://paistiplugins-releases/pfighteraio-2.3.1.jar",
         "features": [
             "Prayer flicking",
             "Banking",
