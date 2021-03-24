@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import css from './LicenseView.module.scss'
 import classNames from 'classnames/bind'
-import { database, storage } from '../utils/firebase'
+import { auth, database, storage } from '../utils/firebase'
 import { MainContext } from '../contexts/MainContext'
 import { LoadingSpinner } from './LoadingSpinner'
 import productJson from '../products.json'
@@ -17,10 +17,12 @@ interface LicenseDataAndDownload {
 export const LicenseView: React.FC = () => {
 	const { user } = useContext(MainContext);
 	const [licenses, setLicenses] = useState<LicenseDataAndDownload[] | undefined>(undefined);
-
 	useEffect(() => {
 		let unsubscribe: null | (() => void) = null;
 		const subscribeToLicenses = async () => {
+			// Refresh token to get new custom claims
+			await auth.currentUser?.getIdToken(true);
+
 			if (!user) {
 				setLicenses(undefined);
 				return;

@@ -14,10 +14,22 @@
         ]
     },
     {
+        "title": "PGearSetup",
+        "description": "Allows you to save & auto withdraw equipment + inventory setups",
+        "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/PGearSetup.png?alt=media&token=8a8b7900-c218-416e-893d-5510fed511bf",
+        "id": "2",
+        "features": [
+            "Save setups",
+            "Auto equip setups",
+            "Add multiple options per slot",
+            "Supports withdrawing noted items"
+        ]
+    },
+    {
         "title": "WebWalker",
         "description": "Walk around Runescape with just one click! Can use travel methods like fairy rings and charter, shortcuts and teleports.",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/webwalker.png?alt=media&token=442b8775-8568-40a9-ae59-45093a995be7",
-        "id": "2",
+        "id": "3",
         "features": [
             "Handle obstacles",
             "Fairy rings",
@@ -32,17 +44,19 @@
         "description": "Full version of AIO Fighter. Supports more features like banking, worldhopping and others. With the license, you can have two instances of the script running at one time.",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/paiofighter.png?alt=media&token=b18e47c5-63f9-43f9-826e-124528b9f49f",
         "price": "5€ / month",
-        "id": "3",
+        "id": "4",
         "priceId": "price_1IQxz7EAKtnsxJlFRU4535Ze",
         "licenseType": "PFIGHTERAIO",
-        "download": "gs://paistiplugins-releases/pfighteraio-2.5.0.jar",
+        "download": "gs://paistiplugins-releases/pfighteraio-2.9.5.jar",
         "features": [
             "Prayer flicking",
             "Banking",
             "Loot before items disappear",
             "Configurable AFK breaks",
-            "Flicks prayers during manual play",
-            "Coming soon: World hopping"
+            "Prayer flick assist mode",
+            "Dwarf multicannon",
+            "Potions",
+            "Herb sack & looting bag"
         ]
     }
 ]
