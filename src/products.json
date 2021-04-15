@@ -47,9 +47,9 @@
         "id": "4",
         "priceId": "price_1IQxz7EAKtnsxJlFRU4535Ze",
         "licenseType": "PFIGHTERAIO",
-        "download": "gs://paistiplugins-releases/pfighteraio-2.9.5.jar",
+        "download": "gs://paistiplugins-releases/pfighteraio-3.0.3.jar",
         "features": [
-            "Prayer flicking",
+            "Prayer & Flicking",
             "Banking",
             "Loot before items disappear",
             "Configurable AFK breaks",
