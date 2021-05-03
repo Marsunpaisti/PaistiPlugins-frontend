@@ -43,9 +43,9 @@
         "title": "PFighterAIO",
         "description": "Full version of AIO Fighter. Supports more features like banking, worldhopping and others. With the license, you can have two instances of the script running at one time.",
         "image": "https://firebasestorage.googleapis.com/v0/b/paistiplugins/o/paiofighter.png?alt=media&token=b18e47c5-63f9-43f9-826e-124528b9f49f",
-        "price": "5€ / month",
+        "price": "Temporarily unavailable",
         "id": "4",
-        "priceId": "price_1IQxz7EAKtnsxJlFRU4535Ze",
+        "priceId": "",
         "licenseType": "PFIGHTERAIO",
         "download": "gs://paistiplugins-releases/pfighteraio-3.0.3.jar",
         "features": [
